@@ -15,3 +15,7 @@ document.querySelector('#stand').addEventListener('click', async() => {
 });
 // DEALER ACTION
 // CONCLUSION
+
+document.querySelector('#newgame').addEventListener('click', async() =>{
+    await blackjack.newGame();
+});
