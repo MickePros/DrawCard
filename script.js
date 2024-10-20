@@ -1,14 +1,17 @@
-document.querySelector("#draw").addEventListener('click', () => {
-    let fullUri = 'https://deckofcardsapi.com/api/deck/new/draw/?count=1';
-    fetch(fullUri) 
-    .then(res => res.json()) 
-    .then(data => 
-    {
-        let image = document.createElement("img");
-        image.setAttribute("src", data.cards[0].image);
-        document.querySelector("#result").innerHTML = '';
-        document.querySelector("#result").appendChild(image);
-        console.log(data);
-    }) 
-    .catch(err => console.log(err)) 
+import Game from "./game.js";
+
+const blackjack = new Game();
+
+// SETUP
+await blackjack.shuffle();
+// DEAL
+await blackjack.deal();
+// PLAYER ACTION
+document.querySelector('#hit').addEventListener('click', async() => {
+    await blackjack.hit();
 });
+document.querySelector('#stand').addEventListener('click', async() => {
+    await blackjack.stand();
+});
+// DEALER ACTION
+// CONCLUSION

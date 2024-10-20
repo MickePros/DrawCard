@@ -10,21 +10,26 @@
 </head>
 <body>
     <header>
-        <h1>Draw a card</h1>
+        <h1>BlackJack</h1>
     </header>
-    <main class="container-fluid">
+    <main class="container">
         <div class="row">
             <div id="form">
-                <h2>Draw a card</h2>
-                <button id="draw" class="btn btn-success">Draw</button>
-                <div id="result"></div>
+                <div id="dealer-hand"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="form">
+                <button id="hit" class="btn btn-success">Hit</button>
+                <button id="stand" class="btn btn-info">Stand</button>
+                <div id="player-hand"></div>
             </div>
         </div>
     </main>
     <footer>
-        <span>Copyright 2024-10-15</span>
+        <span>Copyright 2024-10-17</span>
         <span>Skapad av: Mikael Pros</span>
     </footer>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
